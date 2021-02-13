@@ -1,0 +1,67 @@
+<html>
+<head>
+   <link rel="stylesheet" href="calc_style.css">
+</head>
+
+<body>
+
+   <div class="main_div_for_calc">
+    <div class="title">Hesap Makinesi</div>
+    <table class ="center"> 
+       <tr> 
+          <td colspan="3"><input type="text" id="blok_sonuc"/></td> 
+          <td><input type="button" value="c" onclick="temizle()"/> </td> 
+       </tr> 
+       <tr> 
+          <td><input type="button" value="1" onclick="goruntule('1')"/> </td> 
+          <td><input type="button" value="2" onclick="goruntule('2')"/> </td> 
+          <td><input type="button" value="3" onclick="goruntule('3')"/> </td> 
+          <td><input type="button" value="/" onclick="goruntule('/')"/> </td> 
+       </tr> 
+       <tr> 
+          <td><input type="button" value="4" onclick="goruntule('4')"/> </td> 
+          <td><input type="button" value="5" onclick="goruntule('5')"/> </td> 
+          <td><input type="button" value="6" onclick="goruntule('6')"/> </td> 
+          <td><input type="button" value="-" onclick="goruntule('-')"/> </td> 
+       </tr> 
+       <tr> 
+          <td><input type="button" value="7" onclick="goruntule('7')"/> </td> 
+          <td><input type="button" value="8" onclick="goruntule('8')"/> </td> 
+          <td><input type="button" value="9" onclick="goruntule('9')"/> </td> 
+          <td><input type="button" value="+" onclick="goruntule('+')"/> </td> 
+       </tr> 
+       <tr> 
+          <td><input type="button" value="." onclick="goruntule('.')"/> </td> 
+          <td><input type="button" value="0" onclick="goruntule('0')"/> </td> 
+          <td><input type="button" value="=" onclick="esittir()"/> </td> 
+          <td><input type="button" value="*" onclick="goruntule('*')"/> </td> 
+       </tr> 
+    </table> 
+
+   </div>
+
+
+   <script> 
+      
+      function goruntule(val) 
+      { 
+          document.getElementById("blok_sonuc").value+=val 
+      } 
+        
+      function esittir() 
+      { 
+          let x = document.getElementById("blok_sonuc").value 
+          let y = eval(x) 
+          document.getElementById("blok_sonuc").value = y 
+      } 
+        
+      function temizle() 
+      { 
+          document.getElementById("blok_sonuc").value = "" 
+      } 
+   </script> 
+
+</body>
+
+
+</html>
